@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import tripRoutes from './routes/trips.js'
+import activityRoutes from './routes/activities.js'
 
 // create express app
 const app = express()
@@ -15,6 +16,8 @@ app.get('/', (req, res) => {
 
 // app.use('/trips', tripRoutes)
 app.use('/api/trips', tripRoutes)
+app.use('/api/activities', activityRoutes)
+
 
 
 // Start the server
